@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'log_workout_screen.dart';
 import 'history_screen.dart';
+import 'exercise_database.dart'; // Import the new exercise loader file
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await loadExercises(); // Load exercises from JSON
   runApp(MyApp());
 }
 

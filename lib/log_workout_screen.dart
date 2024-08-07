@@ -206,12 +206,9 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
                         setState(() {
                           filteredExercises = exerciseDatabase
                               .where((exercise) =>
-                                  exercise.name
-                                      .toLowerCase()
-                                      .contains(query.toLowerCase()) ||
-                                  exercise.category
-                                      .toLowerCase()
-                                      .contains(query.toLowerCase()))
+                                  exercise.name.toLowerCase().contains(query.toLowerCase()) ||
+                                  exercise.category.toLowerCase().contains(query.toLowerCase()) ||
+                                  exercise.tags.any((tag) => tag.toLowerCase().contains(query.toLowerCase())))
                               .toList();
                         });
                       },

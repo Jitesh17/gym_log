@@ -1,0 +1,1269 @@
+[
+    {
+        "name": "Bench Press",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/bench_press.png",
+        "tags": ["chest", "strength", "compound"]
+    },
+    {
+        "name": "Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Deadlift",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/deadlift.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Bicep Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/bicep_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Tricep Extension",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/tricep_extension.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Lat Pulldown",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/lat_pulldown.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Shoulder Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/shoulder_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Leg Press",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_press.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Leg Curl",
+        "description": "Hamstring exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_curl.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Leg Extension",
+        "description": "Quad exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_extension.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Pull-Up",
+        "description": "Back and bicep exercise",
+        "category": "Back",
+        "imagePath": "assets/images/pull_up.png",
+        "tags": ["back", "biceps", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Chest Fly",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/chest_fly.png",
+        "tags": ["chest", "strength", "isolation"]
+    },
+    {
+        "name": "Lateral Raise",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/lateral_raise.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Calf Raise",
+        "description": "Calf exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/calf_raise.png",
+        "tags": ["calves", "strength", "isolation"]
+    },
+    {
+        "name": "Crunch",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/crunch.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Russian Twist",
+        "description": "Oblique exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/russian_twist.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Push-Up",
+        "description": "Chest, shoulder, and tricep exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/push_up.png",
+        "tags": ["chest", "shoulders", "triceps", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Mountain Climber",
+        "description": "Core and cardio exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/mountain_climber.png",
+        "tags": ["core", "cardio", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Lunge",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/lunge.png",
+        "tags": ["legs", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Dumbbell Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/dumbbell_row.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Bent Over Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/bent_over_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Shoulder Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/dumbbell_shoulder_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Bench Press",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/dumbbell_bench_press.png",
+        "tags": ["chest", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/barbell_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Tricep Dips",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/tricep_dips.png",
+        "tags": ["arms", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Hanging Leg Raise",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/hanging_leg_raise.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Side Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/side_plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bicycle Crunch",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bicycle_crunch.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Burpee",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/burpee.png",
+        "tags": ["full body", "strength", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Glute Bridge",
+        "description": "Glute exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/glute_bridge.png",
+        "tags": ["glutes", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Superman",
+        "description": "Lower back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/superman.png",
+        "tags": ["back", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Hip Thrust",
+        "description": "Glute exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/hip_thrust.png",
+        "tags": ["glutes", "strength", "isolation"]
+    },
+    {
+        "name": "Inverted Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/inverted_row.png",
+        "tags": ["back", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Jumping Jack",
+        "description": "Cardio exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/jumping_jack.png",
+        "tags": ["full body", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "High Knees",
+        "description": "Cardio exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/high_knees.png",
+        "tags": ["full body", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Box Jump",
+        "description": "Plyometric exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/box_jump.png",
+        "tags": ["legs", "cardio", "plyometric", "compound", "bodyweight"]
+    },
+    {
+        "name": "TRX Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/trx_row.png",
+        "tags": ["back", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Pike Push-Up",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/pike_push_up.png",
+        "tags": ["shoulders", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Wall Sit",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/wall_sit.png",
+        "tags": ["legs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bear Crawl",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/bear_crawl.png",
+        "tags": ["full body", "strength", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Skater Jump",
+        "description": "Cardio exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/skater_jump.png",
+        "tags": ["full body", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Tuck Jump",
+        "description": "Plyometric exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/tuck_jump.png",
+        "tags": ["legs", "cardio", "plyometric", "compound", "bodyweight"]
+    },
+    {
+        "name": "Flutter Kicks",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/flutter_kicks.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Scissor Kicks",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/scissor_kicks.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Step-Up",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/step_up.png",
+        "tags": ["legs", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Turkish Get-Up",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/turkish_get_up.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Renegade Row",
+        "description": "Back and core exercise",
+        "category": "Back",
+        "imagePath": "assets/images/renegade_row.png",
+        "tags": ["back", "core", "strength", "compound"]
+    },
+    {
+        "name": "Goblet Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/goblet_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Bulgarian Split Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bulgarian_split_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Pullover",
+        "description": "Chest and back exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/dumbbell_pullover.png",
+        "tags": ["chest", "back", "strength", "compound"]
+    },
+    {
+        "name": "Sumo Deadlift",
+        "description": "Leg and back exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/sumo_deadlift.png",
+        "tags": ["legs", "back", "strength", "compound"]
+    },
+    {
+        "name": "Kettlebell Swing",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/kettlebell_swing.png",
+        "tags": ["full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Clapping Push-Up",
+        "description": "Chest, shoulder, and tricep exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/clapping_push_up.png",
+        "tags": ["chest", "shoulders", "triceps", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Resistance Band Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/resistance_band_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Resistance Band Bicep Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/resistance_band_bicep_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Resistance Band Tricep Extension",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/resistance_band_tricep_extension.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Resistance Band Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/resistance_band_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Deadlift",
+        "description": "Leg and back exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/dumbbell_deadlift.png",
+        "tags": ["legs", "back", "strength", "compound"]
+    },
+    {
+        "name": "Seated Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/seated_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Cable Chest Fly",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/cable_chest_fly.png",
+        "tags": ["chest", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Bicep Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/cable_bicep_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Tricep Pushdown",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/cable_tricep_pushdown.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Incline Bench Press",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/incline_bench_press.png",
+        "tags": ["chest", "strength", "compound"]
+    },
+    {
+        "name": "Decline Bench Press",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/decline_bench_press.png",
+        "tags": ["chest", "strength", "compound"]
+    },
+    {
+        "name": "Pec Deck Fly",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/pec_deck_fly.png",
+        "tags": ["chest", "strength", "isolation"]
+    },
+    {
+        "name": "Arnold Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/arnold_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Face Pull",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/face_pull.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Reverse Fly",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/reverse_fly.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Barbell Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/barbell_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Front Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/barbell_front_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Hack Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/barbell_hack_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Lunges",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/barbell_lunges.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Kettlebell Deadlift",
+        "description": "Leg and back exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/kettlebell_deadlift.png",
+        "tags": ["legs", "back", "strength", "compound"]
+    },
+    {
+        "name": "Kettlebell Clean and Press",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/kettlebell_clean_and_press.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Kettlebell Goblet Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/kettlebell_goblet_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Kettlebell Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/kettlebell_row.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Kettlebell Snatch",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/kettlebell_snatch.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Bodyweight Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_squat.png",
+        "tags": ["legs", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Lunge",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_lunge.png",
+        "tags": ["legs", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Step-Up",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_step_up.png",
+        "tags": ["legs", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Calf Raise",
+        "description": "Calf exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_calf_raise.png",
+        "tags": ["calves", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Glute Bridge",
+        "description": "Glute exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_glute_bridge.png",
+        "tags": ["glutes", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Crunch",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_crunch.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Push-Up",
+        "description": "Chest, shoulder, and tricep exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/bodyweight_push_up.png",
+        "tags": ["chest", "shoulders", "triceps", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Pull-Up",
+        "description": "Back and bicep exercise",
+        "category": "Back",
+        "imagePath": "assets/images/bodyweight_pull_up.png",
+        "tags": ["back", "biceps", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Dips",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/bodyweight_dips.png",
+        "tags": ["arms", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Pike Push-Up",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/bodyweight_pike_push_up.png",
+        "tags": ["shoulders", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Sit-Up",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_sit_up.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Russian Twist",
+        "description": "Oblique exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_russian_twist.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Bicycle Crunch",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_bicycle_crunch.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Leg Raise",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_leg_raise.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Side Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_side_plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Superman",
+        "description": "Lower back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/bodyweight_superman.png",
+        "tags": ["back", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight High Knees",
+        "description": "Cardio exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/bodyweight_high_knees.png",
+        "tags": ["full body", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Burpee",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/bodyweight_burpee.png",
+        "tags": ["full body", "strength", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Bear Crawl",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/bodyweight_bear_crawl.png",
+        "tags": ["full body", "strength", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Mountain Climber",
+        "description": "Core and cardio exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_mountain_climber.png",
+        "tags": ["core", "cardio", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Jumping Jack",
+        "description": "Cardio exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/bodyweight_jumping_jack.png",
+        "tags": ["full body", "cardio", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Tuck Jump",
+        "description": "Plyometric exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/bodyweight_tuck_jump.png",
+        "tags": ["legs", "cardio", "plyometric", "compound", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Flutter Kicks",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_flutter_kicks.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Bodyweight Scissor Kicks",
+        "description": "Abdominal exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/bodyweight_scissor_kicks.png",
+        "tags": ["abs", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Arnold Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/arnold_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Seated Dumbbell Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/seated_dumbbell_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Shrug",
+        "description": "Trapezius exercise",
+        "category": "Back",
+        "imagePath": "assets/images/barbell_shrug.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Upright Row",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/upright_row.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Farmers Walk",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/farmers_walk.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Fly",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/dumbbell_fly.png",
+        "tags": ["chest", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/cable_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Dumbbell Kickback",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/dumbbell_kickback.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Lateral Raise",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/cable_lateral_raise.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Reverse Pec Deck Fly",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/reverse_pec_deck_fly.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Smith Machine Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/smith_machine_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Smith Machine Bench Press",
+        "description": "Chest exercise",
+        "category": "Chest",
+        "imagePath": "assets/images/smith_machine_bench_press.png",
+        "tags": ["chest", "strength", "compound"]
+    },
+    {
+        "name": "Machine Shoulder Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/machine_shoulder_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Machine Leg Press",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/machine_leg_press.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Machine Leg Extension",
+        "description": "Quad exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/machine_leg_extension.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Machine Leg Curl",
+        "description": "Hamstring exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/machine_leg_curl.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Standing Calf Raise",
+        "description": "Calf exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/standing_calf_raise.png",
+        "tags": ["calves", "strength", "isolation"]
+    },
+    {
+        "name": "Seated Calf Raise",
+        "description": "Calf exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/seated_calf_raise.png",
+        "tags": ["calves", "strength", "isolation"]
+    },
+    {
+        "name": "Donkey Calf Raise",
+        "description": "Calf exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/donkey_calf_raise.png",
+        "tags": ["calves", "strength", "isolation"]
+    },
+    {
+        "name": "Leg Press Machine",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_press_machine.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Leg Extension Machine",
+        "description": "Quad exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_extension_machine.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Leg Curl Machine",
+        "description": "Hamstring exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/leg_curl_machine.png",
+        "tags": ["legs", "strength", "isolation"]
+    },
+    {
+        "name": "Hammer Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/hammer_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Concentration Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/concentration_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Preacher Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/preacher_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Incline Dumbbell Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/incline_dumbbell_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Skull Crusher",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/skull_crusher.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Close Grip Bench Press",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/close_grip_bench_press.png",
+        "tags": ["arms", "strength", "compound"]
+    },
+    {
+        "name": "Overhead Tricep Extension",
+        "description": "Tricep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/overhead_tricep_extension.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Standing Barbell Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/standing_barbell_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "EZ-Bar Curl",
+        "description": "Bicep exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/ez_bar_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Wrist Curl",
+        "description": "Forearm exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/wrist_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Reverse Wrist Curl",
+        "description": "Forearm exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/reverse_wrist_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Reverse Curl",
+        "description": "Forearm exercise",
+        "category": "Arms",
+        "imagePath": "assets/images/reverse_curl.png",
+        "tags": ["arms", "strength", "isolation"]
+    },
+    {
+        "name": "Seated Dumbbell Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/seated_dumbbell_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Seated Barbell Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/seated_barbell_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Barbell Upright Row",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/barbell_upright_row.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Seated Cable Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/seated_cable_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Standing Cable Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/standing_cable_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Smith Machine Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/smith_machine_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Hyperextension",
+        "description": "Lower back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/hyperextension.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Good Morning",
+        "description": "Lower back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/good_morning.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Dead Bug",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/dead_bug.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Hollow Hold",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/hollow_hold.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Ab Wheel Rollout",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/ab_wheel_rollout.png",
+        "tags": ["core", "strength", "isolation"]
+    },
+    {
+        "name": "Dragon Flag",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/dragon_flag.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Hanging Knee Raise",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/hanging_knee_raise.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Hanging Leg Raise",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/hanging_leg_raise.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Side Plank",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/side_plank.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Mountain Climber",
+        "description": "Core and cardio exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/mountain_climber.png",
+        "tags": ["core", "cardio", "strength", "compound", "bodyweight"]
+    },
+    {
+        "name": "Jackknife Sit-Up",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/jackknife_sit_up.png",
+        "tags": ["core", "strength", "isolation", "bodyweight"]
+    },
+    {
+        "name": "Medicine Ball Slam",
+        "description": "Core and full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/medicine_ball_slam.png",
+        "tags": ["core", "full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Battle Rope Wave",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/battle_rope_wave.png",
+        "tags": ["full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Sled Push",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/sled_push.png",
+        "tags": ["full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Tire Flip",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/tire_flip.png",
+        "tags": ["full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Lateral Raise",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/lateral_raise.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Front Raise",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/front_raise.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Rear Delt Fly",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/rear_delt_fly.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Front Raise",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/cable_front_raise.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Rear Delt Fly",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/cable_rear_delt_fly.png",
+        "tags": ["shoulders", "strength", "isolation"]
+    },
+    {
+        "name": "Landmine Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/landmine_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Landmine Squat",
+        "description": "Leg exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/landmine_squat.png",
+        "tags": ["legs", "strength", "compound"]
+    },
+    {
+        "name": "Landmine Deadlift",
+        "description": "Leg and back exercise",
+        "category": "Legs",
+        "imagePath": "assets/images/landmine_deadlift.png",
+        "tags": ["legs", "back", "strength", "compound"]
+    },
+    {
+        "name": "Landmine Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/landmine_row.png",
+        "tags": ["back", "strength", "compound"]
+    },
+    {
+        "name": "Landmine Twist",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/landmine_twist.png",
+        "tags": ["core", "strength", "isolation"]
+    },
+    {
+        "name": "Landmine Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/landmine_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Cable Twist",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/cable_twist.png",
+        "tags": ["core", "strength", "isolation"]
+    },
+    {
+        "name": "Cable Woodchop",
+        "description": "Core exercise",
+        "category": "Abs",
+        "imagePath": "assets/images/cable_woodchop.png",
+        "tags": ["core", "strength", "isolation"]
+    },
+    {
+        "name": "Single Arm Dumbbell Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/single_arm_dumbbell_row.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Single Arm Cable Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/single_arm_cable_row.png",
+        "tags": ["back", "strength", "isolation"]
+    },
+    {
+        "name": "Single Arm Kettlebell Swing",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/single_arm_kettlebell_swing.png",
+        "tags": ["full body", "strength", "cardio", "compound"]
+    },
+    {
+        "name": "Single Arm Landmine Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/single_arm_landmine_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Single Arm Overhead Press",
+        "description": "Shoulder exercise",
+        "category": "Shoulders",
+        "imagePath": "assets/images/single_arm_overhead_press.png",
+        "tags": ["shoulders", "strength", "compound"]
+    },
+    {
+        "name": "Single Arm Dumbbell Clean and Press",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/single_arm_dumbbell_clean_and_press.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Single Arm Dumbbell Snatch",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/single_arm_dumbbell_snatch.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Single Arm Kettlebell Clean and Press",
+        "description": "Full body exercise",
+        "category": "Full Body",
+        "imagePath": "assets/images/single_arm_kettlebell_clean_and_press.png",
+        "tags": ["full body", "strength", "compound"]
+    },
+    {
+        "name": "Single Arm Landmine Row",
+        "description": "Back exercise",
+        "category": "Back",
+        "imagePath": "assets/images/single_arm_landmine_row.png",
+        "tags": ["back", "strength", "isolation"]
+    }
+]

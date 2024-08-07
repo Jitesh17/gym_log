@@ -1,32 +1,36 @@
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 class Exercise {
   final String name;
   final String description;
   final String category;
   final String imagePath;
+  final List<String> tags;
 
   Exercise({
     required this.name,
     required this.description,
     required this.category,
     required this.imagePath,
+    required this.tags,
   });
+
+  factory Exercise.fromJson(Map<String, dynamic> json) {
+    return Exercise(
+      name: json['name'],
+      description: json['description'],
+      category: json['category'],
+      imagePath: json['imagePath'],
+      tags: List<String>.from(json['tags']),
+    );
+  }
 }
 
-List<Exercise> exerciseDatabase = [
-  Exercise(
-      name: 'Bench Press',
-      description: 'Chest exercise',
-      category: 'Chest',
-      imagePath: 'assets/images/bench_press.png'),
-  Exercise(
-      name: 'Squat',
-      description: 'Leg exercise',
-      category: 'Legs',
-      imagePath: 'assets/images/squat.png'),
-  Exercise(
-      name: 'Deadlift',
-      description: 'Back exercise',
-      category: 'Back',
-      imagePath: 'assets/images/deadlift.png'),
-  // Add more exercises with appropriate categories and images
-];
+List<Exercise> exerciseDatabase = [];
+
+Future<void> loadExercises() async {
+  final String response = await rootBundle.loadString('assets/exercises.json');
+  final List<dynamic> data = json.decode(response);
+  exerciseDatabase = data.map((json) => Exercise.fromJson(json)).toList();
+}
