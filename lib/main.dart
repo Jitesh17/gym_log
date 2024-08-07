@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _startNewWorkoutSession() {
     setState(() {
-      _currentSession = WorkoutSession(startTime: DateTime.now(), workouts: []);
+      _currentSession = WorkoutSession(name: '', startTime: DateTime.now(), workouts: []);
     });
     Navigator.push(
       context,

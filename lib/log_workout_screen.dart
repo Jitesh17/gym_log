@@ -14,18 +14,33 @@ class LogWorkoutScreen extends StatefulWidget {
 
 class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
   WorkoutSession? _currentSession;
+  TextEditingController _sessionNameController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _startNewSession();
+    _loadCurrentSession();
   }
 
   void _startNewSession() {
     setState(() {
-      _currentSession = WorkoutSession(startTime: DateTime.now(), workouts: []);
+      _currentSession = WorkoutSession(name: '', startTime: DateTime.now(), workouts: []);
+      _sessionNameController.clear();
     });
     _saveCurrentSession();
+  }
+
+  void _loadCurrentSession() async {
+    final prefs = await SharedPreferences.getInstance();
+    final sessionJson = prefs.getString('current_session');
+    if (sessionJson != null) {
+      setState(() {
+        _currentSession = WorkoutSession.fromJson(jsonDecode(sessionJson));
+        _sessionNameController.text = _currentSession!.name;
+      });
+    } else {
+      _startNewSession();
+    }
   }
 
   void _endSession() async {
@@ -33,6 +48,7 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
 
     setState(() {
       _currentSession!.endTime = DateTime.now();
+      _currentSession!.name = _sessionNameController.text;
     });
 
     final prefs = await SharedPreferences.getInstance();
@@ -45,6 +61,7 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     final updatedSessionsJson = jsonEncode(sessions.map((session) => session.toJson()).toList());
     prefs.setString('sessions', updatedSessionsJson);
 
+    prefs.remove('current_session');
     widget.onSessionEnd();
     Navigator.pop(context);
   }
@@ -142,6 +159,19 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
       ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: TextField(
+              controller: _sessionNameController,
+              decoration: InputDecoration(
+                labelText: 'Session Name',
+              ),
+              onChanged: (value) {
+                _currentSession!.name = value;
+                _saveCurrentSession();
+              },
+            ),
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: _currentSession?.workouts.length ?? 0,
@@ -304,14 +334,16 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
 }
 
 class WorkoutSession {
+  String name;
   final DateTime startTime;
   DateTime? endTime;
   final List<Workout> workouts;
 
-  WorkoutSession({required this.startTime, required this.workouts, this.endTime});
+  WorkoutSession({required this.name, required this.startTime, required this.workouts, this.endTime});
 
   Map<String, dynamic> toJson() {
     return {
+      'name': name,
       'startTime': startTime.toIso8601String(),
       'endTime': endTime?.toIso8601String(),
       'workouts': workouts.map((workout) => workout.toJson()).toList(),
@@ -320,6 +352,7 @@ class WorkoutSession {
 
   factory WorkoutSession.fromJson(Map<String, dynamic> json) {
     return WorkoutSession(
+      name: json['name'] ?? '',
       startTime: DateTime.parse(json['startTime']),
       endTime: json['endTime'] != null ? DateTime.parse(json['endTime']) : null,
       workouts: (json['workouts'] as List).map((workoutJson) => Workout.fromJson(workoutJson)).toList(),

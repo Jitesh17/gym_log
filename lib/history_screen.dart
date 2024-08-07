@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:open_filex/open_filex.dart';
+import 'package:intl/intl.dart'; // Import for date formatting
 
 class HistoryScreen extends StatefulWidget {
   @override
@@ -28,7 +29,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
     if (sessionsJson != null) {
       final sessionsList = jsonDecode(sessionsJson) as List;
       setState(() {
-        _workoutHistory = sessionsList.map((json) => WorkoutSession.fromJson(json)).toList();
+        _workoutHistory =
+            sessionsList.map((json) => WorkoutSession.fromJson(json)).toList();
       });
     }
   }
@@ -38,7 +40,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
       _workoutHistory.removeAt(index);
     });
     final prefs = await SharedPreferences.getInstance();
-    final updatedSessionsJson = jsonEncode(_workoutHistory.map((session) => session.toJson()).toList());
+    final updatedSessionsJson =
+        jsonEncode(_workoutHistory.map((session) => session.toJson()).toList());
     prefs.setString('sessions', updatedSessionsJson);
   }
 
@@ -57,11 +60,21 @@ class _HistoryScreenState extends State<HistoryScreen> {
       int rowIndex = 2;
       for (var session in _workoutHistory) {
         for (var workout in session.workouts) {
-          String sets = workout.sets.map((setController) => '${setController.set.weight}kg x ${setController.set.reps}').join(', ');
-          sheet.getRangeByName('A$rowIndex').setText(session.startTime.toLocal().toString().split(' ')[0]);
-          sheet.getRangeByName('B$rowIndex').setText('${session.startTime.toLocal().toString().split(' ')[1].substring(0, 5)} - ${session.endTime?.toLocal().toString().split(' ')[1].substring(0, 5) ?? 'In Progress'}');
-          sheet.getRangeByName('C$rowIndex').setText(session.duration.inMinutes.toString());
-          sheet.getRangeByName('D$rowIndex').setText(session.totalVolume.toString());
+          String sets = workout.sets
+              .map((setController) =>
+                  '${setController.set.weight}kg x ${setController.set.reps}')
+              .join(', ');
+          sheet
+              .getRangeByName('A$rowIndex')
+              .setText(session.startTime.toLocal().toString().split(' ')[0]);
+          sheet.getRangeByName('B$rowIndex').setText(
+              '${session.startTime.toLocal().toString().split(' ')[1].substring(0, 5)} - ${session.endTime?.toLocal().toString().split(' ')[1].substring(0, 5) ?? 'In Progress'}');
+          sheet
+              .getRangeByName('C$rowIndex')
+              .setText(session.duration.inMinutes.toString());
+          sheet
+              .getRangeByName('D$rowIndex')
+              .setText(session.totalVolume.toString());
           sheet.getRangeByName('E$rowIndex').setText(workout.exercise.name);
           sheet.getRangeByName('F$rowIndex').setText(sets);
           rowIndex++;
@@ -93,6 +106,27 @@ class _HistoryScreenState extends State<HistoryScreen> {
     }
   }
 
+  String _formatSessionDateTime(WorkoutSession session) {
+    final startDate = session.startTime;
+    final endDate = session.endTime ?? DateTime.now();
+
+    final dateFormatter = DateFormat('EEEE, MMM d, yyyy');
+    final timeFormatter = DateFormat('h:mm a');
+
+    final formattedDate = dateFormatter.format(startDate);
+    final formattedStartTime = timeFormatter.format(startDate);
+    final formattedEndTime = timeFormatter.format(endDate);
+
+    return '$formattedDate ($formattedStartTime - $formattedEndTime)';
+  }
+
+  String _formatDuration(Duration duration) {
+    int hours = duration.inHours;
+    int minutes = duration.inMinutes % 60;
+
+    return '${hours > 0 ? '$hours h ' : ''}${minutes} min';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,46 +144,59 @@ class _HistoryScreenState extends State<HistoryScreen> {
         itemBuilder: (context, index) {
           final session = _workoutHistory[index];
           return Card(
-            child: ExpansionTile(
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                      '${session.startTime.toLocal().toString().split(' ')[0]} ${session.startTime.toLocal().toString().split(' ')[1].substring(0, 5)} - ${session.endTime?.toLocal().toString().split(' ')[1].substring(0, 5) ?? 'In Progress'}'),
-                  PopupMenuButton<String>(
+            child: Stack(
+              children: [
+                ExpansionTile(
+                  title: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(session.name,
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      SizedBox(height: 4),
+                      Text(
+                        _formatSessionDateTime(session),
+                        style: TextStyle(color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  subtitle: Text(
+                    'Duration: ${_formatDuration(session.duration)}, Volume: ${session.totalVolume} kg',
+                  ),
+                  children: session.workouts
+                      .map((workout) => ListTile(
+                            title: Text(workout.exercise.name),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children:
+                                  workout.sets.asMap().entries.map((entry) {
+                                int idx = entry.key;
+                                SetController setController = entry.value;
+                                return Text(
+                                    'Set ${idx + 1}: ${setController.set.weight} kg x ${setController.set.reps} reps');
+                              }).toList(),
+                            ),
+                          ))
+                      .toList(),
+                ),
+                Positioned(
+                  top: 8,
+                  right: 8,
+                  child: PopupMenuButton<String>(
                     onSelected: (String result) {
                       if (result == 'delete') {
                         _deleteWorkoutSession(index);
                       }
                     },
-                    itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                    itemBuilder: (BuildContext context) =>
+                        <PopupMenuEntry<String>>[
                       const PopupMenuItem<String>(
                         value: 'delete',
                         child: Text('Delete Session'),
                       ),
                     ],
                   ),
-                ],
-              ),
-              subtitle: Text(
-                  'Duration: ${session.duration.inMinutes} min, Volume: ${session.totalVolume} kg'),
-              children: session.workouts
-                  .map((workout) => ListTile(
-                        title: Text(workout.exercise.name),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: workout.sets
-                              .asMap()
-                              .entries
-                              .map((entry) {
-                                int idx = entry.key;
-                                SetController setController = entry.value;
-                                return Text('Set ${idx + 1}: ${setController.set.weight} kg x ${setController.set.reps} reps');
-                              })
-                              .toList(),
-                        ),
-                      ))
-                  .toList(),
+                ),
+              ],
             ),
           );
         },
