@@ -4,6 +4,10 @@ import 'dart:convert';
 import 'exercise_database.dart';
 
 class LogWorkoutScreen extends StatefulWidget {
+  final VoidCallback onSessionEnd;
+
+  LogWorkoutScreen({required this.onSessionEnd});
+
   @override
   _LogWorkoutScreenState createState() => _LogWorkoutScreenState();
 }
@@ -14,7 +18,7 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
   @override
   void initState() {
     super.initState();
-    _loadCurrentSession();
+    _startNewSession();
   }
 
   void _startNewSession() {
@@ -41,7 +45,8 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     final updatedSessionsJson = jsonEncode(sessions.map((session) => session.toJson()).toList());
     prefs.setString('sessions', updatedSessionsJson);
 
-    _startNewSession();
+    widget.onSessionEnd();
+    Navigator.pop(context);
   }
 
   void _deleteCurrentSession() async {
@@ -50,6 +55,8 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     setState(() {
       _currentSession = null;
     });
+    widget.onSessionEnd();
+    Navigator.pop(context);
   }
 
   void _addWorkout(Exercise exercise) {
@@ -98,23 +105,17 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     }
   }
 
-  void _loadCurrentSession() async {
-    final prefs = await SharedPreferences.getInstance();
-    final sessionJson = prefs.getString('current_session');
-    if (sessionJson != null) {
-      setState(() {
-        _currentSession = WorkoutSession.fromJson(jsonDecode(sessionJson));
-      });
-    } else {
-      _startNewSession();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Log Workout'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         actions: [
           ElevatedButton(
             onPressed: _endSession,
@@ -124,13 +125,18 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
               foregroundColor: Colors.white,
             ),
           ),
-          ElevatedButton(
-            onPressed: _deleteCurrentSession,
-            child: Text('Delete Session'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-            ),
+          PopupMenuButton<String>(
+            onSelected: (String result) {
+              if (result == 'delete') {
+                _deleteCurrentSession();
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              const PopupMenuItem<String>(
+                value: 'delete',
+                child: Text('Delete Session'),
+              ),
+            ],
           ),
         ],
       ),

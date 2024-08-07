@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'log_workout_screen.dart';
 import 'history_screen.dart';
 import 'exercise_database.dart'; // Import the new exercise loader file
+import 'main_screen.dart'; // Import the new main screen file
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,23 +19,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-class MainScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-
-  static final List<Widget> _widgetOptions = <Widget>[
-    LogWorkoutScreen(),
-    HistoryScreen(),
-  ];
+  WorkoutSession? _currentSession;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -42,10 +39,41 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
+  void _startNewWorkoutSession() {
+    setState(() {
+      _currentSession = WorkoutSession(startTime: DateTime.now(), workouts: []);
+    });
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => LogWorkoutScreen(onSessionEnd: _endSession)),
+    );
+  }
+
+  void _endSession() {
+    setState(() {
+      _currentSession = null;
+    });
+  }
+
+  List<Widget> _widgetOptions() => <Widget>[
+        MainScreen(
+          onStartNewWorkout: _startNewWorkoutSession,
+          onResumeWorkout: _currentSession != null ? _resumeWorkoutSession : null,
+        ),
+        HistoryScreen(),
+      ];
+
+  void _resumeWorkoutSession() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => LogWorkoutScreen(onSessionEnd: _endSession)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _widgetOptions.elementAt(_selectedIndex),
+      body: _widgetOptions().elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
