@@ -33,6 +33,15 @@ class _HistoryScreenState extends State<HistoryScreen> {
     }
   }
 
+  void _deleteWorkoutSession(int index) async {
+    setState(() {
+      _workoutHistory.removeAt(index);
+    });
+    final prefs = await SharedPreferences.getInstance();
+    final updatedSessionsJson = jsonEncode(_workoutHistory.map((session) => session.toJson()).toList());
+    prefs.setString('sessions', updatedSessionsJson);
+  }
+
   Future<void> _exportToExcel() async {
     if (await Permission.storage.request().isGranted) {
       final xlsio.Workbook workbook = xlsio.Workbook();
@@ -102,8 +111,26 @@ class _HistoryScreenState extends State<HistoryScreen> {
           final session = _workoutHistory[index];
           return Card(
             child: ExpansionTile(
-              title: Text(
-                  '${session.startTime.toLocal().toString().split(' ')[0]} ${session.startTime.toLocal().toString().split(' ')[1].substring(0, 5)} - ${session.endTime?.toLocal().toString().split(' ')[1].substring(0, 5) ?? 'In Progress'}'),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                      '${session.startTime.toLocal().toString().split(' ')[0]} ${session.startTime.toLocal().toString().split(' ')[1].substring(0, 5)} - ${session.endTime?.toLocal().toString().split(' ')[1].substring(0, 5) ?? 'In Progress'}'),
+                  PopupMenuButton<String>(
+                    onSelected: (String result) {
+                      if (result == 'delete') {
+                        _deleteWorkoutSession(index);
+                      }
+                    },
+                    itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                      const PopupMenuItem<String>(
+                        value: 'delete',
+                        child: Text('Delete Session'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               subtitle: Text(
                   'Duration: ${session.duration.inMinutes} min, Volume: ${session.totalVolume} kg'),
               children: session.workouts

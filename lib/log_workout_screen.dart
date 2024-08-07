@@ -44,6 +44,14 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     _startNewSession();
   }
 
+  void _deleteCurrentSession() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.remove('current_session');
+    setState(() {
+      _currentSession = null;
+    });
+  }
+
   void _addWorkout(Exercise exercise) {
     setState(() {
       _currentSession!.workouts.add(Workout(
@@ -55,9 +63,23 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
     _saveCurrentSession();
   }
 
+  void _deleteWorkout(int index) {
+    setState(() {
+      _currentSession!.workouts.removeAt(index);
+    });
+    _saveCurrentSession();
+  }
+
   void _addSetToWorkout(Workout workout) {
     setState(() {
       workout.sets.add(SetController(Set(weight: 0, reps: 0)));
+    });
+    _saveCurrentSession();
+  }
+
+  void _deleteSetFromWorkout(Workout workout, int index) {
+    setState(() {
+      workout.sets.removeAt(index);
     });
     _saveCurrentSession();
   }
@@ -102,6 +124,14 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
               foregroundColor: Colors.white,
             ),
           ),
+          ElevatedButton(
+            onPressed: _deleteCurrentSession,
+            child: Text('Delete Session'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+            ),
+          ),
         ],
       ),
       body: Column(
@@ -117,6 +147,19 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
                       ListTile(
                         title: Text(workout.exercise.name),
                         subtitle: Text(workout.exercise.description),
+                        trailing: PopupMenuButton<String>(
+                          onSelected: (String result) {
+                            if (result == 'delete') {
+                              _deleteWorkout(index);
+                            }
+                          },
+                          itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                            const PopupMenuItem<String>(
+                              value: 'delete',
+                              child: Text('Delete Exercise'),
+                            ),
+                          ],
+                        ),
                       ),
                       ...workout.sets.asMap().entries.map((entry) {
                         int idx = entry.key;
@@ -153,6 +196,10 @@ class _LogWorkoutScreenState extends State<LogWorkoutScreen> {
                                   },
                                   controller: setController.repsController,
                                 ),
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.delete, color: Colors.red),
+                                onPressed: () => _deleteSetFromWorkout(workout, idx),
                               ),
                             ],
                           ),
