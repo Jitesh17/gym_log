@@ -3,6 +3,7 @@ import 'log_workout_screen.dart';
 import 'history_screen.dart';
 import 'exercise_database.dart'; // Import the new exercise loader file
 import 'main_screen.dart'; // Import the new main screen file
+import 'profile_screen.dart'; // Import the new profile screen file
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +11,20 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void _updateTheme(ThemeMode themeMode) {
+    setState(() {
+      _themeMode = themeMode;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,12 +33,18 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      darkTheme: ThemeData.dark(),
+      themeMode: _themeMode,
+      home: HomeScreen(onThemeChanged: _updateTheme),
     );
   }
 }
 
 class HomeScreen extends StatefulWidget {
+  final void Function(ThemeMode) onThemeChanged;
+
+  HomeScreen({required this.onThemeChanged});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -61,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
           onResumeWorkout: _currentSession != null ? _resumeWorkoutSession : null,
         ),
         HistoryScreen(),
+        ProfileScreen(onThemeChanged: widget.onThemeChanged),
       ];
 
   void _resumeWorkoutSession() {
@@ -83,6 +104,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
